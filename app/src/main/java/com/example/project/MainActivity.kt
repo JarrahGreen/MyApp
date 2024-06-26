@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,11 +32,13 @@ class MainActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.password_input)
         loginButton = findViewById(R.id.login_button)
 
-
         loginButton.setOnClickListener{
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
             Log.i("Test Credentials", "Username: $username and Password : $password")
+
+            val Intent = Intent(this,Activity_2::class.java)
+            startActivity(Intent)
         }
 
     }
